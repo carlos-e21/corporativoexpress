@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo4"
+    android:onClick="boton3"
+    android:orientation="vertical"
+    tools:context=".manuales">
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/manualtitulo" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="86dp"
+        android:layout_height="33dp"
+        android:layout_gravity="right|center_horizontal"
+        android:background="#E82A2A"
+        android:onClick="regresar"
+        android:text="INICIO"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textColorHint="#100F0F"
+        android:textColorLink="#000000"
+        android:textSize="12sp"
+        app:backgroundTint="#8BE60C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+
+                android:text="PANEL VISTA 48 LA"
+                android:textAlignment="textEnd"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnpanelvista48"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton1"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#F1E9E9"
+                android:textColorHighlight="#C51010"
+                android:textColorHint="#CF0D0D"
+                android:textColorLink="#DD1313"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414"
+                app:rippleColor="#E61313"
+                app:strokeColor="#DC0C0C" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="PROGRAMACION RAPIDA" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton2"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="ANTENA MN02-LTE-M-V3" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:onClick="boton3"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="LLAVERO DE ALARMA" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton4"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="PIR INALAMBRICO 5800-PIR" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton5"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="PIR CABLEADO DS-PDP18-EG2(P)" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton6"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="SENSOR MAGNETICO INALAMBRICO 5816" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton7"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="FOTOCELDA SFIRE:SF60P " />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton8"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="Modulo de expansión cableado de 8 zonas" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="boton9"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:text="MANUAL" />
+
+
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ABRIR PDF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:backgroundTint="#E32B2B"
+                app:iconTint="#B51414" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
