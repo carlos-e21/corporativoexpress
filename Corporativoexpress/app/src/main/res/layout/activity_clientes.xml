@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:accessibilityLiveRegion="polite"
         android:fontFamily="@font/kavoon"
-        android:text="@string/clientes"
+        android:text="clientess"
         android:textColor="#F10707"
         android:textSize="48sp"
 
