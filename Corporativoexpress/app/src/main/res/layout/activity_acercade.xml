@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.841" />
 
     <Button
-        android:id="@+id/celular"
+        android:id="@+id/btnsyscom"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="158dp"
         android:layout_height="248dp"
@@ -99,7 +99,7 @@
         android:text="LLAMAR A SYSCOM"
         android:textColor="#090808"
         android:textColorHighlight="#0B0909"
-        app:backgroundTint="#F8F8F8"
+        app:backgroundTint="#59E53935"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.837"
@@ -108,7 +108,7 @@
         app:layout_constraintVertical_bias="0.451" />
 
     <Button
-        android:id="@+id/llamada"
+        android:id="@+id/btnoficina"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="153dp"
         android:layout_height="245dp"
@@ -116,7 +116,7 @@
         android:text="LLAMAR A OFICINA"
         android:textColor="#090808"
         android:textColorHighlight="#0B0909"
-        app:backgroundTint="#F8F8F8"
+        app:backgroundTint="#36E53935"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"
@@ -133,7 +133,7 @@
         app:layout_constraintHorizontal_bias="0.766"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
+        app:layout_constraintVertical_bias="0.297"
         app:srcCompat="@drawable/llamar2" />
 
     <ImageView
