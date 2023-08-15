@@ -1,4 +1,4 @@
-package com.cdp.corporativoexpress;
+package com.cdp.corporativoexpress.clientess;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,49 +17,65 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.cdp.corporativoexpress.R;
+import com.cdp.corporativoexpress.listaclientes;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class clientes extends AppCompatActivity {
+public class editar extends AppCompatActivity {
 
-    EditText edtnombre, edtapellido, edtdireccion, edtcorreo, edttelefono;
-    Button btguardarclientes;
+
+    EditText edtnombre, edtapellido, edtdireccion, edtcorreo, edttelefono,edtid;
+    Button btneditarr;
+    private int position;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clientes);
+        setContentView(R.layout.activity_editar);
 
+        edtid =findViewById(R.id.edtid);
         edtnombre =findViewById(R.id.edtnombre);
         edtapellido = findViewById(R.id.edtapellido);
         edtdireccion =findViewById(R.id.edtdireccion);
         edtcorreo =findViewById(R.id.edtcorreo);
         edttelefono =findViewById(R.id.edttelefono);
-        btguardarclientes =findViewById(R.id.btguardarclientes);
+        btneditarr =findViewById(R.id.btneditarr);
 
-        btguardarclientes.setOnClickListener(new View.OnClickListener() {
+        Intent intent=getIntent();
+        position=intent.getExtras().getInt("position");
+
+        edtid.setText(listaclientes.usuariosArrayList.get(position).getId());
+        edtnombre.setText(listaclientes.usuariosArrayList.get(position).getNombre());
+        edtapellido.setText(listaclientes.usuariosArrayList.get(position).getApellido());
+        edtdireccion.setText(listaclientes.usuariosArrayList.get(position).getDireccion());
+        edtcorreo.setText(listaclientes.usuariosArrayList.get(position).getCorreo());
+        edttelefono.setText(listaclientes.usuariosArrayList.get(position).getTelefono());
+
+        btneditarr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ejecutarclientes();
+                actualizar();
             }
         });
 
 
     }
 
-    private void ejecutarclientes() {
+    private void actualizar() {
 
-    String nombre= edtnombre.getText().toString().trim();
-    String apellidos= edtapellido.getText().toString().trim();
-    String direccion = edtdireccion.getText().toString().trim();
-    String email=edtcorreo.getText().toString().trim();
-    String telefono= edttelefono.getText().toString().trim();
+        String id= edtid.getText().toString().trim();
+        String nombre= edtnombre.getText().toString().trim();
+        String apellidos= edtapellido.getText().toString().trim();
+        String direccion = edtdireccion.getText().toString().trim();
+        String email=edtcorreo.getText().toString().trim();
+        String telefono= edttelefono.getText().toString().trim();
 
         ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("cargando");
+        progressDialog.setMessage("actualizando");
 
         if (nombre.isEmpty()){
             Toast.makeText(this,"ingrese nombre",Toast.LENGTH_SHORT).show();
@@ -71,28 +87,24 @@ public class clientes extends AppCompatActivity {
             Toast.makeText(this,"ingrese email",Toast.LENGTH_SHORT).show();
         }
         else if (telefono.isEmpty()) {
-           Toast.makeText(this,"ingrese numero",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"ingrese numero",Toast.LENGTH_SHORT).show();
         }
         else {
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.100.64/programador/clientes.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.100.64/programador/actualizar.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            if (response.equalsIgnoreCase("datos insertados")) {
-                                Toast.makeText(clientes.this, "registrado correctamente", Toast.LENGTH_SHORT).show();
+
+                                Toast.makeText(editar.this, "actualizado correctamente", Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                                 startActivity(new Intent(getApplicationContext(), listaclientes.class));
-                                finish();
-                            } else {
-                                Toast.makeText(clientes.this, "ERROR, No se puede registrar", Toast.LENGTH_SHORT).show();
-                                progressDialog.dismiss();
-                            }
+
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(clientes.this,error.getMessage(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(editar.this,error.getMessage(),Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }
@@ -100,6 +112,7 @@ public class clientes extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> parametros = new HashMap<>();
+                    parametros.put("id", id);
                     parametros.put("nombre", nombre);
                     parametros.put("apellido", apellidos);
                     parametros.put("direccion", direccion);
@@ -108,17 +121,10 @@ public class clientes extends AppCompatActivity {
                     return parametros;
                 }
             };
-            RequestQueue requestQueue = Volley.newRequestQueue(clientes.this);
+            RequestQueue requestQueue = Volley.newRequestQueue(editar.this);
             requestQueue.add(request);
         }
 
 
     }
-
-    //botones
-    public void regresar(View view) {
-        Intent btregresar = new Intent(this, MainActivity.class);
-        startActivity(btregresar);
-    }
-
 }

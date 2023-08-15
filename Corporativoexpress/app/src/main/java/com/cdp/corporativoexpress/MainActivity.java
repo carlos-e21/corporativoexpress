@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     //botones
     public void btclientes(View view)
     {
-        Intent btclientes = new Intent(this, clientes.class);
+        Intent btclientes = new Intent(this, listaclientes.class);
         startActivity(btclientes);
 
     }

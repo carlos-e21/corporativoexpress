@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="17dp"
+    android:background="@drawable/fondo4"
+    android:layout_height="wrap_content"
+
+    tools:context=".clientess.detalles">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="DETALLES DE USUARIO"
+        android:textAllCaps="false"
+        android:textColor="#EF0909"
+        android:textColorHint="#DC0D0D"
+        android:textColorLink="#E80C0C"
+        android:textDirection="firstStrongLtr"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/edtid"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+
+        android:hint="ingrese id"
+        android:inputType="textPersonName"
+        android:password="true"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/edtnombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/edtapellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/edtdireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/edtcorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/edttelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:inputType="textPersonName"
+        />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="217dp"
+        android:layout_height="149dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo2" />
+
+</LinearLayout>
