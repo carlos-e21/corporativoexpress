@@ -24,8 +24,8 @@
     <Button
         android:id="@+id/btregresac3"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
+        android:layout_width="94dp"
+        android:layout_height="44dp"
         android:background="#E82A2A"
         android:onClick="regresar"
         android:text="@string/inicio"

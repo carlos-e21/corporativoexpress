@@ -21,8 +21,8 @@
     <Button
         android:id="@+id/btregresac2"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="86dp"
-        android:layout_height="33dp"
+        android:layout_width="92dp"
+        android:layout_height="34dp"
         android:background="#E82A2A"
         android:onClick="regresar"
         android:text="INICIO"
@@ -59,29 +59,357 @@
         app:layout_constraintVertical_bias="0.04"
         tools:ignore="MissingConstraints" />
 
+
     <Spinner
-        android:id="@+id/sevcliente"
-        android:layout_width="329dp"
-        android:layout_height="26dp"
-        android:dropDownWidth="match_parent"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinnerservicios"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SELLECIONA UN CLIENTE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.201" />
 
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="2dp">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo1"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd1"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion1"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo2"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd2"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo3"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd3"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion3"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo4"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion4"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.605"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner5"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion5"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.694"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner6"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo6"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd6"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion6"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner7"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo7"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd7"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion7"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
+
+        <Spinner
+            android:id="@+id/spinner8"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/preservation_options"
+            android:prompt="@string/preserpation_prompt" />
+
+        <EditText
+            android:id="@+id/edttipo8"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:hint="tipo_zona"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtzd8"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:hint="ZD"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtubicacion8"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnguardarservicio"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="128dp"
+        android:layout_height="51dp"
+        android:text="GUARDAR"
+        app:backgroundTint="#D55160"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
 </androidx.constraintlayout.widget.ConstraintLayout>

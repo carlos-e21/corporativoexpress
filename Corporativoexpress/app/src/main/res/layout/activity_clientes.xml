@@ -10,8 +10,8 @@
     <Button
         android:id="@+id/btregresac3"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
+        android:layout_width="99dp"
+        android:layout_height="49dp"
         android:background="#E82A2A"
         android:onClick="regresar"
         android:text="@string/inicio"
@@ -127,8 +127,8 @@
     <Button
         android:id="@+id/btguardarclientes"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
+        android:layout_width="122dp"
+        android:layout_height="52dp"
         android:background="#E82A2A"
 
         android:text="@string/guardar"
